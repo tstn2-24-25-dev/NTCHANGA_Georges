@@ -13,14 +13,17 @@ print()
 #Creation de la fonction "score_mot" : elle donne le score d'un mot
 
 def score_mot(phrase):
-    score = 0
+    #operation = '0'
     point = 0
     for i in range(len(phrase)):
-      if(phrase[i] in data):
-        position= data.index(phrase[i])
-        point += float(data[position+1])
-    dic[phrase] = point
+      if(phrase[i] in t):
+        position= t.index(phrase[i])
+        #print(position)
+        #operation += " + " + t[position+1]
+        point += int(t[position+1])
+    dic[phrase] = operation + "=" + str(point)
     print(dic)
+
     return point
        
 score_mot("cafe")
