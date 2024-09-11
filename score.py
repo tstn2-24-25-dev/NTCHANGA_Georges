@@ -2,9 +2,7 @@ data = "a 1 b 3 c 3 d 2 e 1 f 4 g 2 u 1"
 t = data.split(" ")
 print(t)
 
-mot="cafe"
-m = mot.split()
-print(m)
+
 
 dic={}
 
