@@ -1,10 +1,9 @@
 def triRapide(tab):
-    for i in range(1,len(tab)):
+    for i in range(1,len(tab)//2 + 1):
         j=len(tab)-i
         if (tab[i]>=tab[j]):
             tab[i],tab[j]=tab[j],tab[i]
             print(tab)
-
     #print(tab)
     return tab
 
