@@ -1,0 +1,37 @@
+exemples:
+
+1/colonne
+2/colonne
+3/USE
+4/ A: les deux sont identiques;
+5/B la deuxième requête
+6/GROUP BY
+7/HAVING : quand nous sommes avec les groupes
+8/Modify
+9/show create database
+10/
+	10.1/
+
+	SELECT E.prenom,R.montant 
+	FROM employe E
+	INNER JOIN Reward R
+	ON E.employee_id=R.employee_ref_id
+	WHERE R.amount=0;
+	
+	10.2/
+	
+	SELECT E.First_name, R.amount 
+	FROM Employee E 
+	INNER JOIN Reward R 
+	ON E.employee_id = R.employee_ref_id
+	(WHERE E.salary>10000)
+
+
+	10.5/
+	SELECT min(salary)
+	FROM (SELECT * FROM employee
+	ORDER BY salary DESC LIMIT 2)
+	
+	
+
+11/

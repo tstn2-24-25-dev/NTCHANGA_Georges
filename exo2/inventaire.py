@@ -10,10 +10,13 @@ with open(fichier, "r", encoding="utf-8") as f:
 
 #nbr_produit = int(lignes[0])
 #print(nbr_produit)
+
+# magasins : stocke les produits (nom de produit et prix)
 magasins = lignes[1:]
 print(magasins)
 dico=[]
 
+#procuvtion : est une fonction qui creer range dans la liste dico le nom de produit suivi de leurs prix
 def production():
 
     for produits in magasins:
@@ -25,10 +28,22 @@ def production():
     #print(dico_tri[0])
 production()
 
+#Creation d'une fonction qui permetra de calculer la sommes des artivles qui se repetent
+
 recencement_nom = dico[0::2]
 
-print(recencement_nom)
+'''for nom in recencement_nom:
+    index_recencement=[]
+    for meme in range(recencement_nom.index(nom)):
+        if(nom == meme):'''
+recencement_prix=dico[1::2]
+recencement={}
 
+
+
+
+for i,val in enumerate(recencement_nom):
+    print(i,val)
 
 
 
