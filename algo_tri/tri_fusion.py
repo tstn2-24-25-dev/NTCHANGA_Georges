@@ -1,5 +1,6 @@
-T=[]
+
 def fusinner(tab1,tab2):
+        T=[]
         for i  in range(len(tab1)):
                 max_tab1= max(tab1)
                 max_tab2= max(tab2)
@@ -18,12 +19,23 @@ def fusinner(tab1,tab2):
                                 j+=1
                 #T.extend(tab1[i:])
         T.extend(tab2[a:])
+        return T
 
 
-tab1=[8,27,33]
-tab2=[14,16,31,54]
+def tri_fusion(tab):
+        #division de la table en deux
+        n = len(tab)//2
+        tab1=tab[:n]
+        tb2=tab[n:]
+        #utilisation de la recurcivite
+        tab1=tri_fusion(tab1)
+        tb2=tri_fusion(tb2)
+        #Appel de la fonction fusionner
+        fusinner(tab1,tb2)
 
-fusinner(tab1,tab2)
 
 
-print(T)
+
+
+
+
